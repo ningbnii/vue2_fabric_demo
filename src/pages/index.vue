@@ -10,6 +10,11 @@
     <van-cell title="折线" is-link to="/test/polyline" />
     <van-cell title="路径" is-link to="/test/path" />
     <van-cell title="文本" is-link to="/test/text" />
+    <van-cell title="渐变" is-link to="/test/gradient" />
+    <van-cell title="分组" is-link to="/test/group" />
+    <van-cell title="动画" is-link to="/test/animate" />
+    <van-cell title="事件" is-link to="/test/event" />
+    <van-cell title="自由绘画" is-link to="/test/drawing" />
   </van-list>
 </template>
 

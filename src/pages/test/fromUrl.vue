@@ -55,6 +55,23 @@ export default {
     fabric.Image.fromURL(jailCellBars, (img) => {
       // img.scaleToWidth(this.canvas.width)
       img.scaleToHeight(this.canvas.height)
+      // 添加滤镜
+      img.filters.push(
+        new fabric.Image.filters.Grayscale(),
+        new fabric.Image.filters.Sepia(), // 色偏
+        new fabric.Image.filters.Invert(), // 反色
+        // new fabric.Image.filters.Brightness({ brightness: 0.5 }) // 亮度
+        // 模糊滤镜
+        // new fabric.Image.filters.Blur({
+        //   blur: 0.5,
+        // })
+        // 像素画
+        new fabric.Image.filters.Pixelate({
+          blocksize: 5,
+        })
+      )
+      // 应用滤镜
+      img.applyFilters()
       this.canvas.setOverlayImage(img, this.canvas.renderAll.bind(this.canvas))
     })
 
