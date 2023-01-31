@@ -41,22 +41,6 @@ const router = new Router({
 })
 
 router.beforeEach((to, from, next) => {
-  // 第一次进入页面，存储进入的url
-  if (
-    location.href.indexOf('stack-key') != -1 &&
-    !sessionStorage.getItem('firstEnterUrl')
-  ) {
-    sessionStorage.setItem('firstEnterUrl', location.href)
-  }
-  // 如果进入的的url是首页，则设置setTabBarActive为0，如果是community/index,则设置为1
-  // 调用vuex的方法，设置tabbar的active
-  if (to.path == '/') {
-    store.commit('setTabBarActive', 0)
-    // } else if (to.path == '/community/index') {
-    //   store.commit('setTabBarActive', 2)
-  } else if (to.path == '/home') {
-    store.commit('setTabBarActive', 2)
-  }
   next()
 })
 

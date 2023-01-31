@@ -14,10 +14,7 @@ import LightTimeline from 'vue-light-timeline'
 // import Navigation from 'vue-navigation'
 
 let openid = Cookies.get('openid')
-let debugOpenid = [
-  'otR84wQTS1CHHMr98Tp37dapy8_s',
-  'otR84wb-MdGvfqllKYPSDkQi9cO0',
-]
+let debugOpenid = ['otR84wQTS1CHHMr98Tp37dapy8_s', 'otR84wb-MdGvfqllKYPSDkQi9cO0']
 
 if (debugOpenid.indexOf(openid) !== -1) {
   const vConsole = new VConsole()
