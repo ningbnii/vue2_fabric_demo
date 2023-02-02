@@ -15,6 +15,7 @@
     <van-cell title="动画" is-link to="/test/animate" />
     <van-cell title="事件" is-link to="/test/event" />
     <van-cell title="自由绘画" is-link to="/test/drawing" />
+    <van-cell title="裁剪" is-link to="/test/clip" />
   </van-list>
 </template>
 
